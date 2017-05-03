@@ -9,17 +9,17 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     db.collection('Users').findOneAndUpdate({
         _id: new ObjectID('5908f9564e87b1d682258801')
     }, {
-            $set: {
-                name: "Gaben"
-            },
-            $inc: {
-                age: 1
-            }
-        }, {
-            returnOriginal: false
-        }).then((result) => {
-            console.log(result);
-        });
+        $set: {
+            name: 'Gaben'
+        },
+        $inc: {
+            age: 1
+        }
+    }, {
+        returnOriginal: false
+    }).then((result) => {
+        console.log(result);
+    });
 
     //db.close();
 });
